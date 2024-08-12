@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+rel="stylesheet"
+/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="fondo">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <h3>Tienda en Línea</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactanos.html">Contacto</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="javascript:void(0)" id="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                        <div id="cart-dropdown" class="cart-dropdown shadow p-3 bg-white rounded">
+                            <h5>Carrito de Compras</h5>
+                            <ul id="cart-items" class="list-unstyled">
+                                <!-- Productos seleccionados aparecerán aquí -->
+                            </ul>
+                            <p>Total: $<span id="cart-total">0</span></p>
+                            <button class="btn btn-primary" onclick="checkout()">Finalizar Compra</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <div class="p-1 text-center bg-image"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+      height: 400px;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Tienda en Linea </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <div class="contenido">
+        <h2>QUIENES SOMOS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eligendi eveniet itaque ipsam alias dolor tenetur, sint incidunt ut iure, magni beatae earum quod dignissimos porro mollitia. Voluptatibus, reprehenderit repudiandae?</p>    
+    </div>
+
+    <main class="Rh">
+        <div class="Vision">
+            <H3>Vision</H3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat tenetur sequi tempore, velit a recusandae odit. Perspiciatis nam accusantium sed placeat architecto delectus ex eius recusandae, laborum facere dolorem?</p>
+        </div>
+        <div class="Mision">
+            <h3>Mision</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorum dignissimos voluptate fugiat. Quae, amet. Aut a mollitia nostrum odio omnis, sint quidem adipisci quod asperiores ipsum voluptatem vitae debitis.</p>
+        </div>
+        <div class="Objetivo">
+            <H3>Objetivo</H3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo aliquam dolorem assumenda fugit aperiam porro modi reprehenderit ipsa cum atque vero, amet magni, ut corporis accusamus corrupti optio vel molestias.</p>
+        </div>
+    </main>
+
+
+    <div class="mapa">
+        <h3>Encuentranos</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29612.74860004306!2d-102.2656512!3d21.911721000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1723448205871!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+    <footer class="bg-dark text-white text-center p-4">
+        <div class="container">
+            <p>&copy; 2024 Tienda en Línea. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=es_LA" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/?lang=es" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+</body>
+</html>

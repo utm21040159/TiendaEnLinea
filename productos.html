@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="fondo">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <h3>Tienda en Línea</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactanos.html">Contacto</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link" href="javascript:void(0)" id="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                            <div id="cart-dropdown" class="cart-dropdown shadow p-3 bg-white rounded">
+                                <h5>Carrito de Compras</h5>
+                                <ul id="cart-items" class="list-unstyled">
+                                    <!-- Productos seleccionados aparecerán aquí -->
+                                </ul>
+                                <p>Total: $<span id="cart-total">0</span></p>
+                                <button class="btn btn-primary" onclick="checkout()">Finalizar Compra</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Aqui es donde agregaresmo los productos en cards -->
+    <main>
+        <div class="product-list container my-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 product" id="product1">
+                    <div class="card">
+                        <img src="/img/Elotes.jpeg" class="card-img-top" alt="Producto 1">
+                            <!-- Agregamos el Nombre del producto y precio -->
+                        <div class="card-body">
+                            <h5 class="card-title">ELOTES</h5>
+                            <p class="card-text">Precio: $10</p>
+                            <div class="quantity-controls">
+                                <!-- Agregamos botones donde podremos agregar y eliminar la cantidad -->
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product1')">-</button>
+                                <!-- Aqui se mostrara la cantidad -->
+                                <span id="product1-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product1')">+</button>
+                            </div>
+                            <!-- Este es el boton para agregarlo en el carrito -->
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product1', 'Elotes', 10)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product" id="product2">
+                    <div class="card">
+                        <img src="/img/Chasca.jpeg" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">CHASCA</h5>
+                            <p class="card-text">Precio: $15</p>
+                            <div class="quantity-controls">
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product2')">-</button>
+                                <span id="product2-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product2')">+</button>
+                            </div>
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product2', 'Chascas', 15)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product" id="product3">
+                    <div class="card">
+                        <img src="/img/Doritos.jpeg" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">DORICHASCA</h5>
+                            <p class="card-text">Precio: $20</p>
+                            <div class="quantity-controls">
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product3')">-</button>
+                                <span id="product3-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product3')">+</button>
+                            </div>
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product3', 'Producto 3', 20)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <main>
+        <div class="product-list container my-5">
+            <div class="row">
+                <div class="col-md-4 mb-4 product" id="product1">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 1">
+                            <!-- Agregamos el Nombre del producto y precio -->
+                        <div class="card-body">
+                            <h5 class="card-title">Nooo</h5>
+                            <p class="card-text">Precio: $10</p>
+                            <div class="quantity-controls">
+                                <!-- Agregamos botones donde podremos agregar y eliminar la cantidad -->
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product4')">-</button>
+                                <!-- Aqui se mostrara la cantidad -->
+                                <span id="product4-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product4')">+</button>
+                            </div>
+                            <!-- Este es el boton para agregarlo en el carrito -->
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product4', 'Noo', 10)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product" id="product2">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 2</h5>
+                            <p class="card-text">Precio: $15</p>
+                            <div class="quantity-controls">
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product2')">-</button>
+                                <span id="product2-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product2')">+</button>
+                            </div>
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product2', 'Producto 2', 15)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 product" id="product3">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 3</h5>
+                            <p class="card-text">Precio: $20</p>
+                            <div class="quantity-controls">
+                                <button class="btn btn-outline-secondary" onclick="decreaseQuantity('product3')">-</button>
+                                <span id="product3-quantity" class="mx-2">0</span>
+                                <button class="btn btn-outline-secondary" onclick="increaseQuantity('product3')">+</button>
+                            </div>
+                            <button class="btn btn-primary mt-3" onclick="addToCart('product3', 'Producto 3', 20)">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </main> 
+</div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+</body>
+
+</html>
